@@ -9,6 +9,7 @@ pip install psycopg2
 pip install sqlalchemy
 pip install passlib[bcrypt]
 pip install python-jose[cryptography]
+pip install pydantic-settings
 
 
 
