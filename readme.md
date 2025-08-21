@@ -132,5 +132,14 @@ heroku run "alembic upgrade head"
 
 heroku ps:restart
 
+### delete heroku apps along with its database, pipeline, database etc
+heroku apps:destroy -a fastapi-m-helal --confirm fastapi-m-helal
+
+### for ubuntu 
+set -o allexport; source /home/helal/.env; set +o allexport
+
+gunicorn -w 4 -k uvicorn.workers.UvicornWorker app.main:app --bind 0.0.0.0:8000
+
+
 
 
