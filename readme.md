@@ -91,6 +91,20 @@ git remote add origin <url>
 git push -u origin main
 
 
+### install heroku at windows
+
+heroku login
+
+heroku create fastapi-m-helal
+
+git remote
+
+git push heroku main
+
+git add --all
+
+git commit -m "added procfile"
+
 
 
 
