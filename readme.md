@@ -1,8 +1,60 @@
+### configure below virtual environment
+
 uvicorn app.main:app
 py -3 -m venv venv
 venv\scripts\activate
 venv\scripts\deactivate
 
+### configure alembic migrations
+
+alembic init alembic
+
+alembic revision -m "create posts table"
+
+alembic current
+
+alembic upgrade c5951cc9a962
+
+alembic revision -m "add content column to posts table"
+
+alembic current
+
+alembic heads
+
+alembic upgrade 40e0011fd47e or alembic upgrade head
+
+alembic downgrade c5951cc9a962
+
+alembic revision -m "add user table" 
+
+alembic current
+
+alembic history
+
+alembic upgrade head
+
+alembic revision -m "add foregin-key to posts table"
+
+alembic upgrade head
+
+alembic revision -m "add last few columns to posts table"
+
+alembic upgrade +1
+
+alembic downgrade c5951cc9a962
+
+alembic revision --autogenerate -m "auto-vote"
+
+alembic revision --autogenerate -m "added phone numbers to users table"
+
+
+
+
+
+
+
+
+### install below package
 
 pip install fastapi[all]
 pip install psycopg2
@@ -10,8 +62,10 @@ pip install sqlalchemy
 pip install passlib[bcrypt]
 pip install python-jose[cryptography]
 pip install pydantic-settings
+pip install alembic
 
 
+### go through below documentation to know more
 
 https://fastapi.tiangolo.com/tutorial/
 
@@ -19,8 +73,7 @@ https://www.psycopg.org/docs/
 
 https://docs.pydantic.dev/latest/api/base_model/
 
-https://learn.kodekloud.com/user/courses/python-api-development-with-fastapi/module/1c3ad280-5fee-4b8e-a891-42a61f9a2dd0/lesson/3b6e099c-5e15-43f3-944b-0df6aa5f215c
-
+https://alembic.sqlalchemy.org/en/latest/api/ddl.html#module-alembic.ddl
 
 
 
