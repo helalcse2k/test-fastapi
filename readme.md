@@ -50,10 +50,6 @@ alembic revision --autogenerate -m "added phone numbers to users table"
 
 
 
-
-
-
-
 ### install below package
 
 pip install fastapi[all]
@@ -63,6 +59,8 @@ pip install passlib[bcrypt]
 pip install python-jose[cryptography]
 pip install pydantic-settings
 pip install alembic
+
+pip install -r requirements.txt
 
 
 ### go through below documentation to know more
@@ -74,6 +72,24 @@ https://www.psycopg.org/docs/
 https://docs.pydantic.dev/latest/api/base_model/
 
 https://alembic.sqlalchemy.org/en/latest/api/ddl.html#module-alembic.ddl
+
+### CORS policy
+
+fetch('http://localhost:8000/').then(res => res.json()).then(console.log)
+
+
+### install git
+
+git init
+git add --all
+git commit -m "initial commit"
+git config --global user.email "helal@gmail.com"
+git config --global user.name "M Helal Uddin"
+git commit -m "initial commit"
+git branch -M main
+git remote add origin <url>
+git push -u origin main
+
 
 
 

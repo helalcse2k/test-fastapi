@@ -30,14 +30,14 @@ class Post(BaseModel):
     owner: UserOut
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 class PostOut(BaseModel):
     Post: Post
     votes: int
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
     
 
