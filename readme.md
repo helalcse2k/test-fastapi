@@ -114,7 +114,6 @@ heroku addons:create heroku-postgresql:hobby-dev # hobby-dev is no longer exist
 
 heroku addons:create heroku-postgresql:essential-0
 
-postgresql-flexible-37991
 
 heroku addons:info postgresql-flexible-37991
 
