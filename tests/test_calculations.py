@@ -66,3 +66,4 @@ def test_bank_transaction(zero_bank_account, deposited, withdraw, expected):
 def test_insufficient_funds(bank_account):
     with pytest.raises(InsufficientFunds):
         bank_account.withdraw(200)
+
