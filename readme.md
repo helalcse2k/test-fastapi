@@ -99,7 +99,6 @@ heroku create fastapi-m-helal
 
 git remote
 
-git push heroku main
 
 git add --all
 
